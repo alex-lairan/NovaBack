@@ -33,6 +33,9 @@ gem 'bootsnap'
 gem 'pry', '= 0.13.1'
 gem 'pry-byebug', '~> 3.9'
 
+# Discord
+gem 'discordrb-webhooks'
+
 group :development do
   gem 'rubocop', '~> 1.3', require: false
   gem 'rubocop-performance', '~> 1.8', require: false
