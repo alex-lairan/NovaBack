@@ -23,6 +23,12 @@ module Domain
           .select(*fields)
           .to_a
       end
+
+      def add(application)
+        applicants
+          .command(:create)
+          .call(application.to_h)
+      end
     end
   end
 end

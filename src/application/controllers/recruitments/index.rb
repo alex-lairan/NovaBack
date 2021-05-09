@@ -5,9 +5,14 @@ module Application
     module Recruitments
       class Index < Controller
         include Hanami::Action
+        include Domain::Recruitment::Importer['recruitment_repository']
 
         def call(_params)
-          respond_with({})
+          recruitments = recruitment_repository.all
+
+          result = recruitments.map(&:to_h)
+
+          respond_with(result)
         end
       end
     end
