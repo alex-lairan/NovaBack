@@ -36,6 +36,9 @@ gem 'pry-byebug', '~> 3.9'
 # Discord
 gem 'discordrb-webhooks'
 
+# Security
+gem 'bcrypt'
+
 group :development do
   gem 'rubocop', '~> 1.3', require: false
   gem 'rubocop-performance', '~> 1.8', require: false

@@ -3,8 +3,9 @@
 module Domain
   module Recruitment
     module UseCases
-
       class Apply
+        include Importer['application_repository']
+
         def call(application_contract)
           application = setup_application_from_contract(application_contract)
 
